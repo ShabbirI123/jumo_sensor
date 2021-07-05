@@ -22,6 +22,11 @@ Route::get('/about', function () {
 /*Route::get('/login', function () {
     return view('login');
 });*/
-Route::get('/login', "\App\Http\Controllers\MainController@index");
+Route::get('/',"\App\Http\Controllers\MainController@index");
+Route::get('/about',"\App\Http\Controllers\MainController@index");
+Route::get('/login', "\App\Http\Controllers\MainController@login");
+Route::post('/checklogin', '\App\Http\Controllers\MainController@checklogin');
+Route::get('/successlogin', '\App\Http\Controllers\MainController@successlogin');
+Route::get('/logout', '\App\Http\Controllers\MainController@logout');
 
 
