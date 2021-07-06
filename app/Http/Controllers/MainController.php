@@ -6,20 +6,29 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 use App\Jumo;
+use DB;
 
 class MainController extends Controller
 {
-    function index() {
+    public function index()
+    {
         return view('welcome');
     }
 
-    function about(){
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function about()
+    {
         return view('about');
     }
 
-    function login()
+    public function download(Request $request)
     {
-        return view('login');
+        $sensordatas = DB::select('select * from jumo_values');
+        return view('checkboxes', ['sensordatas'=>$sensordatas]);
     }
 
     function checklogin(Request $request)

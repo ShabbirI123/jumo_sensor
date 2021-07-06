@@ -3,8 +3,8 @@
         <h3 align="center">Simple Login System in Laravel</h3><br />
         <form method="post" action="">
             <div class="form-group">
-                <label>Enter Email</label>
-                <input type="email" name="email" class="form-control" />
+                <label>Enter Username</label>
+                <input type="text" name="username" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Enter Password</label>

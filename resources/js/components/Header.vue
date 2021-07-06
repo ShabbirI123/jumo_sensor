@@ -14,6 +14,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/download">Downloads</a>
+                    </li>
                     <!--<li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Dropdown
@@ -39,7 +42,8 @@ export default {
     name: "Header.vue",
     mounted() {
         console.log('Header Component mounted.')
-    }
+    },
+    components: { }
 }
 </script>
 
