@@ -20,7 +20,7 @@
         <h3 align="center">Simple Login System in Laravel</h3><br />
 
         @if(isset(Auth::user()->name))
-            <script>window.location="/successlogin";</script>
+            <script>window.location="/home";</script>
         @endif
 
         @if ($message = Session::get('error'))

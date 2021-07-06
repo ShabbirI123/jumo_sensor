@@ -9,28 +9,25 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body class="antialiased">
-    <div id="header">
-        <side-nav-bar.vue></side-nav-bar.vue>
-    </div>
 
-    <div class="container box">
-        <h3 align="center">Simple Login System in Laravel</h3><br />
-
+    <div class="mybody">
         @if(isset(Auth::user()->name))
-            <div class="alert alert-danger success-block">
-                <strong>Welcome</strong>
-                <br />
-                <a href="{{ url('/logout') }}">Logout</a>
+            <div id="app">
+                <app-component></app-component>
             </div>
+
         @else
-            <script>window.location = "/";</script>
+            <script>window.location = "/login";</script>
         @endif
 
         <br />
     </div>
+
 
     <div id="footer">
         <footer-component></footer-component>
@@ -41,8 +38,5 @@
 </body>
 </html>
 <script>
-    import SideNavBar
-    export default {
-        components: {SideNavBar}
-    }
+
 </script>

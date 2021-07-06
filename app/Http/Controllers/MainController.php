@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Validator;
 use Auth;
-use App\Jumo;
+
 
 class MainController extends Controller
 {
@@ -22,37 +20,18 @@ class MainController extends Controller
         return view('login');
     }
 
-    function checklogin(Request $request)
+    function home()
     {
-        $this->validate($request, [
-            'name'   => 'required|string|max:255',
-            'password'  => 'required|min:3'
-        ]);
-
-        $user_data = array(
-            'name'  => $request->get('name'),
-            'password' => $request->get('password')
-        );
-
-        if(Auth::attempt($user_data))
-        {
-            return redirect('/successlogin');
-        }
-        else
-        {
-            return back()->with('error', 'Wrong Login Details');
-        }
-
-    }
-
-    function successlogin()
-    {
-        return view('successlogin');
+        return view('home');
     }
 
     function logout()
     {
         Auth::logout();
         return redirect('/');
+    }
+
+    function admin(){
+
     }
 }
