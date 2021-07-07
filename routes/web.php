@@ -19,6 +19,12 @@ Route::get('/login', "\App\Http\Controllers\MainController@login");
 Route::post('/checklogin', '\App\Http\Controllers\UserAuth@checklogin');
 Route::get('/home', '\App\Http\Controllers\MainController@home');
 Route::get('/logout', '\App\Http\Controllers\MainController@logout');
+Route::get('/download', '\App\Http\Controllers\MainController@download');
+Route::get('/users', '\App\Http\Controllers\MainController@users');
+Route::get('/settings', '\App\Http\Controllers\MainController@settings');
+Route::get('/dashboard', '\App\Http\Controllers\MainController@dashboard');
+
 
 Route::get('jumo_values', [DownloadFile::class,'getData']);
+
 

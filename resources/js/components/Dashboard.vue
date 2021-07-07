@@ -1,5 +1,5 @@
 <template>
-    <div id="dashboard">
+    <div class="dashboard">
         <div>
             <!-- CO2 -->
             <iframe class="keepclearofsidebar" src="http://195.201.96.148:3000/d-solo/LNhMA-k7z/jumo_values?orgId=1&panelId=2" width="700" height="400" frameborder="0"></iframe>

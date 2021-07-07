@@ -37,7 +37,7 @@
             </li>
             <li>
                 <a href="/download">
-                    <i class='bx bxs-download' id="downloadBtn" v-on:click="component='Download'"></i>
+                    <i class='bx bxs-download' id="downloadBtn"></i>
                     <span class="links_name">Download</span>
                 </a>
                 <span class="tooltip">Download</span>

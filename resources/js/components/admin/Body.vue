@@ -8,11 +8,9 @@
 <script>
 import Content from "./Content";
 import SideNavBar from "./SideNavBar";
-import Download from "./Download";
 
 export default {
     components: {
-        'Download':Download,
         Content,
         SideNavBar,
     },
