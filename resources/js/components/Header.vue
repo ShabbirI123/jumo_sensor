@@ -26,9 +26,9 @@
                         </div>
                     </li>-->
                 </ul>
-<!--                <form class="form-inline my-2 my-lg-0">-->
-<!--                    <a class="btn btn-primary" href="/login" role="button">Sign In</a>-->
-<!--                </form>-->
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-primary" href="/login" role="button">Sign In</a>
+                </form>
             </div>
         </nav>
     </div>

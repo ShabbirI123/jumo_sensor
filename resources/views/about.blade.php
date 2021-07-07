@@ -19,6 +19,15 @@
     <footer-component></footer-component>
 </div>
 
+@if(isset(Auth::user()->name))
+    <div class="alert alert-danger success-block">
+        <strong>You are logged in!</strong>
+        <br />
+        <a href="{{ url('/logout') }}">Logout</a>
+    </div>
+@else
+    <script>window.location = "/login";</script>
+@endif
 
 <script src="{{asset("js/app.js")}}"></script>
 </body>

@@ -17,6 +17,16 @@
             <welcome-component></welcome-component>
             <footer-component></footer-component>
         </div>
+
+        @if(isset(Auth::user()->name))
+            <div id="app">
+                <app-component></app-component>
+                <footer-component></footer-component>
+            </div>
+        @else
+            <script>window.location = "/login";</script>
+        @endif
+        
         <script src="{{asset("js/app.js")}}"></script>
     </body>
 </html>
