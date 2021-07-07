@@ -25,5 +25,6 @@ Route::get('/settings', '\App\Http\Controllers\MainController@settings');
 Route::get('/dashboard', '\App\Http\Controllers\MainController@dashboard');
 
 
-Route::get('jumo_values', [DownloadFile::class,'getData']);;
+Route::get('jumo_values', [DownloadFile::class,'getData']);
+
 

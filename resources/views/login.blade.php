@@ -18,7 +18,7 @@
     <div class="container box">
         <h3 align="center">Login</h3><br/>
 
-        @if(isset(Auth::user()->name))
+        @if(isset(Auth::user()->role))
             <script>window.location = "/home";</script>
         @endif
 

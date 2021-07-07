@@ -6,7 +6,16 @@
 
 <script>
 export default {
-    name: "Home.vue"
+    name: "Home.vue",
+    props: ['user'],
+    data(){
+        return {
+
+        }
+    },
+    mounted() {
+        console.log(this.user)
+    }
 }
 </script>
 

@@ -18,7 +18,8 @@
 <div class="mybody">
     @if(isset(Auth::user()->name))
         <div id="app">
-            <app-component></app-component>
+            <h1> hhhhhhhhhhhhhhhhhhhhhhhhhhhhh{{ auth()->user()->role }}</h1>
+            <app-component v-bind:userId="{{ Auth::user()->id }}"></app-component>
             <footer-component></footer-component>
         </div>
     @else

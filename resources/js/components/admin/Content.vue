@@ -19,12 +19,13 @@
 </template>
 
 <script>
-import Download from "./Download";
+import Download from "../Download";
 import SideNavBar from "./SideNavBar";
-import Dashboard from "./Dashboard";
-import Home from "./Home";
+import Dashboard from "../Dashboard";
+import Home from "../Home";
 import Users from "./Users";
-import Settings from "./Settings";
+import Settings from "../Settings";
+
 export default {
     name: "Content.vue",
     components: {
@@ -43,40 +44,34 @@ export default {
         let download = document.getElementById("download");
         let settings = document.getElementById("setting");
 
-        if (window.location.href === 'http://127.0.0.1:8000/home') {
+
+        if (window.location.href === 'http://localhost:3000/home') {
             download.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        }
-        if (window.location.href === 'http://127.0.0.1:8000/download') {
+        } else if (window.location.href === 'http://localhost:3000/download') {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        }
-        if (window.location.href === 'http://127.0.0.1:8000/dashboard') {
+        } else if (window.location.href === 'http://localhost:3000/dashboard') {
             home.style.display = "none";
             download.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        }
-        if (window.location.href === 'http://127.0.0.1:8000/users') {
+        } else if (window.location.href === 'http://localhost:3000/users') {
             home.style.display = "none";
             dashboard.style.display = "none";
             download.style.display = "none";
             settings.style.display = "none";
-        }
-        if (window.location.href === 'http://127.0.0.1:8000/settings') {
+        } else if (window.location.href === 'http://localhost:3000/settings') {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
             download.style.display = "none";
         }
     },
-    data() {
-        return {};
-    }
 }
 </script>
 
@@ -89,7 +84,6 @@ export default {
 
 #content {
     width: inherit;
-    /*background: red;*/
     margin-left: 75px;
     height: 100%;
 }
