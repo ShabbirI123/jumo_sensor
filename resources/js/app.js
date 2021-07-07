@@ -9,19 +9,7 @@ Vue.component('about-component', require('./components/About').default);
 Vue.component('header-component', require('./components/Header').default);
 Vue.component('footer-component', require('./components/Footer').default);
 
-
-const header = new Vue({
-    el: '#header',
-});
-
 const app = new Vue({
     el: '#app',
 });
 
-const footer = new Vue({
-    el: '#footer',
-});
-
-const login = new Vue({
-    el: '#login',
-});

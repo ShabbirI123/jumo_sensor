@@ -12,18 +12,11 @@
 
     </head>
     <body class="antialiased">
-        <div id="header">
-            <header-component></header-component>
-        </div>
-
         <div id="app">
+            <header-component></header-component>
             <welcome-component></welcome-component>
-        </div>
-
-        <div id="footer">
             <footer-component></footer-component>
         </div>
-
         <script src="{{asset("js/app.js")}}"></script>
     </body>
 </html>

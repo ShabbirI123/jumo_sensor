@@ -30,7 +30,6 @@ class UserAuth extends Controller
             $busers = trim($users, '[]');
             $ausers = trim($busers, '"');
 
-            echo($ausers);
             $request->session()->put('role', $ausers);
             if ($ausers)
             return redirect('/home');

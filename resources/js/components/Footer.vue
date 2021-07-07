@@ -24,5 +24,7 @@ export default {
     text-align: center;
     border: 1px dotted black;
     z-index: 100;
+    background: #fff;
+    margin-top: 10px;
 }
 </style>

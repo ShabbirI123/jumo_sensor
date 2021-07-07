@@ -31,7 +31,18 @@ class MainController extends Controller
         return redirect('/');
     }
 
-    function admin(){
-
+    function download(){
+        return view('/download');
     }
+
+    function dashboard(){
+        return view('/dashboard');
+    }
+    function users(){
+        return view('/users');
+    }
+    function settings(){
+        return view('/settings');
+    }
+
 }

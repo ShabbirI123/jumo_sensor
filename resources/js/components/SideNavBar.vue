@@ -8,14 +8,21 @@
         </div>
         <ul class="nav_list">
             <li>
-                <a href="#">
+                <a href="/home">
+                    <i class='bx bxs-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="/dashboard">
                     <i class='bx bx-grid-alt' ></i>
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/users">
                     <i class='bx bxs-user-account' ></i>
                     <span class="links_name">Users</span>
                 </a>
@@ -29,14 +36,14 @@
                 <span class="tooltip">My Profile</span>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bxs-download'></i>
+                <a href="/download">
+                    <i class='bx bxs-download' id="downloadBtn" v-on:click="component='Download'"></i>
                     <span class="links_name">Download</span>
                 </a>
                 <span class="tooltip">Download</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/settings">
                     <i class='bx bx-cog' ></i>
                     <span class="links_name">Setting</span>
                 </a>
@@ -58,17 +65,7 @@ export default {
     mounted() {
 
         console.log('Sidebar Component mounted.')
-        let btn = document.querySelector("#btn");
-        let sidebar = document.querySelector(".sidebar");
 
-        btn.onclick = function() {
-            sidebar.classList.toggle("active");
-            if(btn.classList.contains("bx-menu")){
-                btn.classList.replace("bx-menu" , "bx-menu-alt-right");
-            } else {
-                btn.classList.replace("bx-menu-alt-right", "bx-menu");
-            }
-        }
     }
 }
 
@@ -83,12 +80,7 @@ export default {
     box-sizing: border-box;
     font-family: "Poppins" , sans-serif;
 }
-body{
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
+
 ::selection{
     color: #fff;
     background: #11101d;
@@ -98,14 +90,14 @@ body{
     top: 0;
     left: 0;
     height: 100%;
-    width: 78px;
+    width: 75px;
     background: #11101d;
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
 }
 .sidebar.active{
-    width: 240px
+    width: 230px;
 }
 .sidebar .logo_content .logo{
     color: #fff;
@@ -151,7 +143,6 @@ body{
     position: relative;
     height: 50px;
     width: 100%;
-    margin: 0 5px;
     list-style: none;
     line-height: 50px;
     margin: 5px 0;
