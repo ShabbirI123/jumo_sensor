@@ -1,9 +1,11 @@
 <template>
+
     <footer class="footer">
         <div class="container-fluid">
-            <span class="text-muted">Sponsored by JUMO</span>
+            <p class="text">JUMO Mess- und Regelgeräte GmbH</p>
         </div>
     </footer>
+
 </template>
 
 <script>
@@ -15,6 +17,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+.footer {
+    width: 100%;
+    display: inline-block;
+    margin: 2em 0;
+    height: 70px;
+    background-color: #999;
+    font-family: Raleway, sans-serif;
+    position: fixed;
+    bottom: 0;
+}
+
+.text {
+    padding-left: 10%;
+    color: white;
+    font-size: 1em;
+    line-height: 70px;
+}
 
 </style>

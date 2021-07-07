@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>JUMO</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -12,8 +12,9 @@
 
 </head>
 <body class="antialiased">
+
     <div id="header">
-        <side-nav-bar.vue></side-nav-bar.vue>
+        <header-component></header-component>
     </div>
 
     <div class="container box">
@@ -21,7 +22,7 @@
 
         @if(isset(Auth::user()->name))
             <div class="alert alert-danger success-block">
-                <strong>Welcome</strong>
+                <strong>You are logged in!</strong>
                 <br />
                 <a href="{{ url('/logout') }}">Logout</a>
             </div>
@@ -33,7 +34,7 @@
     </div>
 
     <div id="footer">
-        <footer-component></footer-component>
+{{--        <footer-component></footer-component>--}}
     </div>
 
 <script async defer src="{{asset("js/app.js")}}"></script>
@@ -41,7 +42,7 @@
 </body>
 </html>
 <script>
-    import SideNavBar
+    //import SideNavBar from
     export default {
         components: {SideNavBar}
     }

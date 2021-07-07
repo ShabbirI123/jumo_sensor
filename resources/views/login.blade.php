@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>JUMO</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -17,11 +17,7 @@
     </div>
 
     <div class="container box">
-        <h3 align="center">Simple Login System in Laravel</h3><br />
-
-        @if(isset(Auth::user()->name))
-            <script>window.location="/successlogin";</script>
-        @endif
+        <h3 align="center">Login to the JUMO Dashboard!</h3><br />
 
         @if ($message = Session::get('error'))
             <div class="alert alert-danger alert-block">
@@ -56,8 +52,13 @@
         </form>
     </div>
 
+    @if(isset(Auth::user()->name))
+        {{--        <script>window.location="/successlogin";</script>--}}
+        <script>window.location = "/";</script>
+    @endif
+
     <div id="footer">
-        <footer-component></footer-component>
+{{--        <footer-component></footer-component>--}}
     </div>
 
 <script src="{{asset("js/app.js")}}"></script>

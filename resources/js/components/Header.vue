@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid keepclearofsidebar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Jumo Sensor</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +26,9 @@
                         </div>
                     </li>-->
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-primary" href="/login" role="button">Sign In</a>
-                </form>
+<!--                <form class="form-inline my-2 my-lg-0">-->
+<!--                    <a class="btn btn-primary" href="/login" role="button">Sign In</a>-->
+<!--                </form>-->
             </div>
         </nav>
     </div>
@@ -43,6 +43,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+.keepclearofsidebar {
+    margin-left: 160px;
+}
 </style>

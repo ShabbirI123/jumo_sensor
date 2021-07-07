@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Validator;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Jumo;
 
 class MainController extends Controller
@@ -36,6 +36,7 @@ class MainController extends Controller
 
         if(Auth::attempt($user_data))
         {
+            session(['username' => 'admin']);
             return redirect('/successlogin');
         }
         else
