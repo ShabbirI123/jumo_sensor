@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>JUMO</title>
+    <title>Laravel</title>
 
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
@@ -12,12 +12,15 @@
 
 </head>
 <body class="antialiased">
-    <div id="header">
-        <header-component></header-component>
-    </div>
 
+<div id="app">
+    <header-component></header-component>
     <div class="container box">
-        <h3 align="center">Login to the JUMO Dashboard!</h3><br />
+        <h3 align="center">Login</h3><br/>
+
+        @if(isset(Auth::user()->name))
+            <script>window.location = "/home";</script>
+        @endif
 
         @if ($message = Session::get('error'))
             <div class="alert alert-danger alert-block">
@@ -40,26 +43,19 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label>Enter Username</label>
-                <input type="text" name="name" class="form-control" />
+                <input type="text" name="name" class="form-control"/>
             </div>
             <div class="form-group">
                 <label>Enter Password</label>
-                <input type="password" name="password" class="form-control" />
+                <input type="password" name="password" class="form-control"/>
             </div>
             <div class="form-group">
-                <input type="submit" name="login" class="btn btn-primary" value="Login" />
+                <input type="submit" name="login" class="btn btn-primary" value="Login"/>
             </div>
         </form>
     </div>
-
-    @if(isset(Auth::user()->name))
-        {{--        <script>window.location="/successlogin";</script>--}}
-        <script>window.location = "/";</script>
-    @endif
-
-    <div id="footer">
-{{--        <footer-component></footer-component>--}}
-    </div>
+    <footer-component></footer-component>
+</div>
 
 <script src="{{asset("js/app.js")}}"></script>
 

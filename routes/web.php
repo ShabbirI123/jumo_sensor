@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DownloadFile;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,22 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    Route::get('/about', function () {
-        return view('about');
-    });
-});
-/*Route::get('/login', function () {
-    return view('login');
-});*/
 Route::get('/',"\App\Http\Controllers\MainController@index");
 Route::get('/about',"\App\Http\Controllers\MainController@about");
 Route::get('/login', "\App\Http\Controllers\MainController@login");
-Route::post('/checklogin', '\App\Http\Controllers\MainController@checklogin');
-Route::get('/successlogin', '\App\Http\Controllers\MainController@successlogin');
+Route::post('/checklogin', '\App\Http\Controllers\UserAuth@checklogin');
+Route::get('/home', '\App\Http\Controllers\MainController@home');
 Route::get('/logout', '\App\Http\Controllers\MainController@logout');
 
+Route::get('jumo_values', [DownloadFile::class,'getData']);
 

@@ -9,17 +9,27 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body class="antialiased">
 
-<div id="app">
-    <header-component></header-component>
-    <about-component></about-component>
-    <footer-component></footer-component>
+<div class="mybody">
+    @if(isset(Auth::user()->name))
+        <div id="app">
+            <app-component></app-component>
+            <footer-component></footer-component>
+        </div>
+    @else
+        <script>window.location = "/login";</script>
+    @endif
 </div>
 
+<script async defer src="{{asset("js/app.js")}}"></script>
 
-<script src="{{asset("js/app.js")}}"></script>
 </body>
 </html>
+<script>
+
+</script>
