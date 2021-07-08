@@ -16,14 +16,21 @@
 <body class="antialiased">
 
 <div class="mybody">
-    @if(isset(Auth::user()->name))
-        <div id="app">
-            <app-component></app-component>
-            <footer-component></footer-component>
-        </div>
-    @else
-        <script>window.location = "/login";</script>
-    @endif
+        @if(isset(Auth::user()->name))
+            @if(Auth::user()->role=='admin')
+                <div id="app">
+                    <app-component></app-component>
+                    <footer-component></footer-component>
+                </div>
+            @else
+                <script>
+                    window.alert("Can only access with admin rights!");
+                </script>
+                <script>window.location = "/home";</script>
+            @endif
+        @else
+            <script>window.location = "/login";</script>
+        @endif
 </div>
 
 <script async defer src="{{asset("js/app.js")}}"></script>

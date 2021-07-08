@@ -23,6 +23,7 @@ Route::get('/download', '\App\Http\Controllers\MainController@download');
 Route::get('/users', '\App\Http\Controllers\MainController@users');
 Route::get('/settings', '\App\Http\Controllers\MainController@settings');
 Route::get('/dashboard', '\App\Http\Controllers\MainController@dashboard');
+Route::get('/export', [\App\Http\Controllers\JumoValueController::class, 'exportData'])->name('export');
 
 
 Route::get('jumo_values', [DownloadFile::class,'getData']);

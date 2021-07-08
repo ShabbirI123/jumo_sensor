@@ -45,27 +45,32 @@ export default {
         let settings = document.getElementById("setting");
 
 
-        if (window.location.href === 'http://localhost:3000/home') {
+        if (window.location.href === 'http://127.0.0.1:8000/home') {
+        // if (window.location.href === 'http://195.201.96.148:8001/home') {
             download.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        } else if (window.location.href === 'http://localhost:3000/download') {
+        } else if (window.location.href === 'http://127.0.0.1:8000/download') {
+            // } else if (window.location.href === 'http://195.201.96.148:8001/download') {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        } else if (window.location.href === 'http://localhost:3000/dashboard') {
+        } else if (window.location.href === 'http://127.0.0.1:8000/dashboard') {
+            // } else if (window.location.href === 'http://195.201.96.148:8001/dashboard') {
             home.style.display = "none";
             download.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
-        } else if (window.location.href === 'http://localhost:3000/users') {
+        } else if (window.location.href === 'http://127.0.0.1:8000/users') {
+            // } else if (window.location.href === 'http://195.201.96.148:8001/users') {
             home.style.display = "none";
             dashboard.style.display = "none";
             download.style.display = "none";
             settings.style.display = "none";
-        } else if (window.location.href === 'http://localhost:3000/settings') {
+        } else if (window.location.href === 'http://127.0.0.1:8000/settings') {
+            // } else if (window.location.href === 'http://195.201.96.148:8001/settings') {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";

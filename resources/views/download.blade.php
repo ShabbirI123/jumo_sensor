@@ -17,10 +17,17 @@
 
 <div class="mybody">
     @if(isset(Auth::user()->name))
-        <div id="app">
-            <app-component></app-component>
-            <footer-component></footer-component>
-        </div>
+        @if(Auth::user()->role=='admin'||Auth::user()->role=='superuser')
+            <div id="app">
+                <app-component></app-component>
+                <footer-component></footer-component>
+            </div>
+        @else
+            <script>
+                window.alert("Can only access with admin or superuser rights!");
+            </script>
+            <script>window.location = "/home";</script>
+        @endif
     @else
         <script>window.location = "/login";</script>
     @endif

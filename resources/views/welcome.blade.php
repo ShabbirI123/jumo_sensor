@@ -15,6 +15,7 @@
         <div id="app">
             <header-component></header-component>
             <welcome-component></welcome-component>
+{{--            <img src="{{ asset('/images/jumo_logo.jpg') }}" alt="Jumo_Logo">--}}
             <footer-component></footer-component>
         </div>
         <script src="{{asset("js/app.js")}}"></script>
