@@ -4,6 +4,7 @@
         <p class="content-wrapper">JUMO GmbH & Co. KG is a leading global supplier of components and systems for individual sensor and automation solutions.
             In addition to components for the measuring ranges temperature, liquid analysis, pressure, level, flow, and humidity
             the focus is also on automation challenges such as recording and monitoring as well as control and automation. </p>
+        <br>
 
         <div class="container">
             <div style="text-align:center">
@@ -12,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="column">
-                    <img src="/resources/images/map.jpg" style="width:100%">
+                    <img src="https://commons.wikimedia.org/wiki/File:Google_Maps_icon_(2015-2020).svg" style="width:100%">
                 </div>
                 <div class="column">
                     <form action="/action_page.php">
@@ -32,19 +33,6 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="contact_data">
-            <p>
-                KONTAKT
-
-                JUMO Mess- und Regelgeräte GmbH
-                Pfarrgasse 48
-                1230 Wien, Austria
-
-                Telefon: +43 1 61061-0
-                Telefax: +43 1 61061-40
-                E-Mail: info.at@jumo.net
-            </p>
         </div>
     </div>
 </template>
@@ -66,10 +54,14 @@ export default {
 </script>
 
 <style scoped>
+    h1 {
+        text-align: center;
+    }
     .content-wrapper {
         width: inherit;
-        max-width: 50%;
+        /*max-width: 50%;*/
         margin-left: 15px;
+        text-align: center;
     }
 
     * {
@@ -118,6 +110,7 @@ export default {
         width: 50%;
         margin-top: 6px;
         padding: 20px;
+        padding-bottom: 25px;
     }
 
     /* Clear floats after the columns */

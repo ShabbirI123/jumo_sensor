@@ -9,6 +9,9 @@
         <div id="users">
             <Users/>
         </div>
+        <div id="profile">
+            <Profile/>
+        </div>
         <div id="download">
             <Download/>
         </div>
@@ -25,6 +28,7 @@ import Dashboard from "../Dashboard";
 import Home from "../Home";
 import Users from "./Users";
 import Settings from "../Settings";
+import Profile from "./Profile";
 
 export default {
     name: "Content.vue",
@@ -35,6 +39,7 @@ export default {
         Download,
         Settings,
         SideNavBar,
+        Profile,
     },
     mounted() {
         console.log('Content Component mounted');
@@ -43,6 +48,7 @@ export default {
         let users = document.getElementById("users");
         let download = document.getElementById("download");
         let settings = document.getElementById("setting");
+        let profile = document.getElementById("profile");
 
 
         if (window.location.href === 'http://127.0.0.1:8000/home') {
@@ -51,15 +57,18 @@ export default {
             dashboard.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
+            profile.style.display = "none";
         } else if (window.location.href === 'http://127.0.0.1:8000/download') {
             // } else if (window.location.href === 'http://195.201.96.148:8001/download') {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
+            profile.style.display = "none";
             settings.style.display = "none";
         } else if (window.location.href === 'http://127.0.0.1:8000/dashboard') {
             // } else if (window.location.href === 'http://195.201.96.148:8001/dashboard') {
             home.style.display = "none";
+            profile.style.display = "none";
             download.style.display = "none";
             users.style.display = "none";
             settings.style.display = "none";
@@ -67,6 +76,7 @@ export default {
             // } else if (window.location.href === 'http://195.201.96.148:8001/users') {
             home.style.display = "none";
             dashboard.style.display = "none";
+            profile.style.display = "none";
             download.style.display = "none";
             settings.style.display = "none";
         } else if (window.location.href === 'http://127.0.0.1:8000/settings') {
@@ -74,7 +84,15 @@ export default {
             home.style.display = "none";
             dashboard.style.display = "none";
             users.style.display = "none";
+            profile.style.display = "none";
             download.style.display = "none";
+        } else if (window.location.href === 'http://127.0.0.1:8000/profile') {
+            // } else if (window.location.href === 'http://195.201.96.148:8001/profile') {
+            home.style.display = "none";
+            dashboard.style.display = "none";
+            users.style.display = "none";
+            download.style.display = "none";
+            settings.style.display = "none";
         }
     },
 }

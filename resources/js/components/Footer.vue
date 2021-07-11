@@ -1,7 +1,15 @@
 <template>
     <footer class="footer">
         <div class="container-fluid">
-            <span class="text-muted">Sponsored by JUMO</span>
+            <span class="text-muted">
+                JUMO Mess- und Regelgeräte GmbH
+                Pfarrgasse 48
+                1230 Wien, Austria
+
+                Telefon: +43 1 61061-0
+                Telefax: +43 1 61061-40
+                E-Mail: info.at@jumo.net
+            </span>
         </div>
     </footer>
 </template>

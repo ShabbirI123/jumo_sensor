@@ -2,8 +2,8 @@
     <div id="about">
         <div class="about-section">
             <h1>About Us Page</h1>
-            <p>testsetstset</p>
-            <p>setgsetseetrsetsetststsetsetgsgesges</p>
+            <p>Once online, you will see more information about JUMO</p>
+            <p>This if a filler</p>
         </div>
 
         <h2 style="text-align:center">Our Team</h2>
@@ -88,7 +88,7 @@ html {
 .about-section {
     padding: 50px;
     text-align: center;
-    background-color: #474e5d;
+    background-color: #203367;
     color: white;
 }
 

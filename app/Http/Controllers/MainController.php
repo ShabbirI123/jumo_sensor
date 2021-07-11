@@ -38,11 +38,16 @@ class MainController extends Controller
     function dashboard(){
         return view('/dashboard');
     }
+
     function users(){
         return view('/users');
     }
+
     function settings(){
         return view('/settings');
     }
 
+    function profile(){
+        return view('/profile');
+    }
 }
