@@ -2530,42 +2530,42 @@ __webpack_require__.r(__webpack_exports__);
     var profile = document.getElementById("profile");
 
     if (window.location.href === 'http://127.0.0.1:8000/home') {
-      // if (window.location.href === 'http://195.201.96.148:8001/home') {
+      //    if (window.location.href === 'http://195.201.96.148:8001/home') {
       download.style.display = "none";
       dashboard.style.display = "none";
       users.style.display = "none";
       settings.style.display = "none";
       profile.style.display = "none";
     } else if (window.location.href === 'http://127.0.0.1:8000/download') {
-      // } else if (window.location.href === 'http://195.201.96.148:8001/download') {
+      //    } else if (window.location.href === 'http://195.201.96.148:8001/download') {
       home.style.display = "none";
       dashboard.style.display = "none";
       users.style.display = "none";
       profile.style.display = "none";
       settings.style.display = "none";
     } else if (window.location.href === 'http://127.0.0.1:8000/dashboard') {
-      // } else if (window.location.href === 'http://195.201.96.148:8001/dashboard') {
+      //    } else if (window.location.href === 'http://195.201.96.148:8001/dashboard') {
       home.style.display = "none";
       profile.style.display = "none";
       download.style.display = "none";
       users.style.display = "none";
       settings.style.display = "none";
     } else if (window.location.href === 'http://127.0.0.1:8000/users') {
-      // } else if (window.location.href === 'http://195.201.96.148:8001/users') {
+      //    } else if (window.location.href === 'http://195.201.96.148:8001/users') {
       home.style.display = "none";
       dashboard.style.display = "none";
       profile.style.display = "none";
       download.style.display = "none";
       settings.style.display = "none";
     } else if (window.location.href === 'http://127.0.0.1:8000/settings') {
-      // } else if (window.location.href === 'http://195.201.96.148:8001/settings') {
+      //    } else if (window.location.href === 'http://195.201.96.148:8001/settings') {
       home.style.display = "none";
       dashboard.style.display = "none";
       users.style.display = "none";
       profile.style.display = "none";
       download.style.display = "none";
     } else if (window.location.href === 'http://127.0.0.1:8000/profile') {
-      // } else if (window.location.href === 'http://195.201.96.148:8001/profile') {
+      //    } else if (window.location.href === 'http://195.201.96.148:8001/profile') {
       home.style.display = "none";
       dashboard.style.display = "none";
       users.style.display = "none";

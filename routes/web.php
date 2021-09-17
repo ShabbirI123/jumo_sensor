@@ -23,7 +23,10 @@ Route::get('/download', '\App\Http\Controllers\MainController@download');
 Route::get('/users', '\App\Http\Controllers\MainController@users');
 Route::get('/settings', '\App\Http\Controllers\MainController@settings');
 Route::get('/dashboard', '\App\Http\Controllers\MainController@dashboard');
+Route::get('/profile', '\App\Http\Controllers\MainController@profile');
 Route::get('/export', [\App\Http\Controllers\JumoValueController::class, 'exportData'])->name('export');
+Route::post('/users', [\App\Http\Controllers\UserManagementController::class, 'createUser'])->name('createUser');
+Route::post('/profile', [\App\Http\Controllers\UserManagementController::class, 'changePassword'])->name('changePassword');
 
 
 Route::get('jumo_values', [DownloadFile::class,'getData']);
